@@ -22,13 +22,4 @@ in edify.mkDerivation rec {
 
   # Extra flags to pass to Pandoc:
   pandocFlags = [ "pdf-engine=xelatex" "variable=theme:Boadilla" ];
-
-  # Extra files to include in the zip archive:
-  extraFiles = [ "LICENSE" "README.md" "start-scripts" "src" ];
-
-  # Additional system dependencies:
-  buildInputs = nodeHelper.buildInputs;
-
-  # Install things:
-  installPhase = nodeHelper.installPhase;
 }
